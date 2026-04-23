@@ -26,6 +26,10 @@ python3 -m http.server 8080
 # Open http://127.0.0.1:8080
 ```
 
+## 支持邮箱 / Support email
+
+`index.html` 内当前为占位地址 **`CHANGE_THIS_EMAIL@example.com`**。在仓库里 **全局搜索该字符串**（含 `mailto:` 与显示文字）并全部替换为你真实可收信的地址后再保存、推送；上架 App Store 前务必完成，否则用户无法通过邮件联系你。
+
 ## Files
 
 - `index.html` — Bilingual (简体中文 / English) support page, hash routes `#zh` and `#en`.
