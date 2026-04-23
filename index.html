@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PicCute — 技术支持 / Support</title>
+    <meta
+      name="description"
+      content="PicCute 官方技术支持：系统要求、常见问题与反馈方式。Official support for PicCute, a macOS image compression app."
+    />
+    <style>
+      :root {
+        --bg: #0f1419;
+        --surface: #1a2028;
+        --text: #e7eaed;
+        --muted: #8b9aad;
+        --accent: #5eb0ff;
+        --border: #2a3441;
+        --link: #7cc4ff;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family:
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          "Helvetica Neue",
+          Arial,
+          sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+        font-size: 1rem;
+      }
+      a {
+        color: var(--link);
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      header {
+        border-bottom: 1px solid var(--border);
+        background: var(--surface);
+        position: sticky;
+        top: 0;
+        z-index: 10;
+      }
+      .header-inner {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 1rem 1.25rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.75rem;
+      }
+      .brand {
+        font-weight: 600;
+        font-size: 1.125rem;
+        letter-spacing: -0.02em;
+      }
+      .lang-switch {
+        display: flex;
+        gap: 0.5rem;
+      }
+      .lang-switch a {
+        padding: 0.35rem 0.75rem;
+        border-radius: 6px;
+        font-size: 0.9rem;
+        color: var(--muted);
+        border: 1px solid transparent;
+      }
+      .lang-switch a[aria-current="true"] {
+        color: var(--text);
+        background: var(--bg);
+        border-color: var(--border);
+      }
+      .lang-switch a:hover {
+        color: var(--text);
+        text-decoration: none;
+        background: var(--bg);
+      }
+      main {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 2rem 1.25rem 4rem;
+      }
+      section {
+        margin-bottom: 2.5rem;
+      }
+      h1 {
+        font-size: 1.75rem;
+        font-weight: 600;
+        margin: 0 0 0.5rem;
+        letter-spacing: -0.03em;
+      }
+      .lede {
+        color: var(--muted);
+        margin: 0 0 2rem;
+        font-size: 1.05rem;
+      }
+      h2 {
+        font-size: 1.15rem;
+        font-weight: 600;
+        margin: 0 0 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid var(--border);
+      }
+      ul {
+        margin: 0;
+        padding-left: 1.25rem;
+      }
+      li {
+        margin: 0.4rem 0;
+      }
+      .card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: 1.25rem 1.35rem;
+      }
+      .card p {
+        margin: 0.5rem 0 0;
+      }
+      .card p:first-child {
+        margin-top: 0;
+      }
+      .muted {
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+      [hidden] {
+        display: none !important;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header-inner">
+        <div class="brand">PicCute</div>
+        <nav class="lang-switch" aria-label="Language">
+          <a href="#zh" id="link-zh" aria-current="true">中文</a>
+          <a href="#en" id="link-en">English</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div id="block-zh">
+        <h1>技术支持</h1>
+        <p class="lede">
+          PicCute 是面向 macOS 的轻量图片压缩工具，支持 PNG、JPEG 与 WebP。下面为官方说明与常见问题。
+        </p>
+
+        <section>
+          <h2>系统要求</h2>
+          <ul>
+            <li>macOS 11（Big Sur）或更高版本</li>
+            <li>支持 Apple Silicon 与 Intel Mac</li>
+            <li>从 Mac App Store 或官方分发渠道安装的应用均适用本页说明</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>快速开始</h2>
+          <ul>
+            <li>将图片或文件夹拖入窗口，选择输出格式与质量后执行压缩</li>
+            <li>可在设置中覆盖原文件，或指定输出目录与文件名模板</li>
+            <li>菜单栏 <strong>PicCute → Language / 语言</strong> 可切换界面语言（与系统语言可独立设置）</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>常见问题</h2>
+          <ul>
+            <li>
+              <strong>为什么压缩后体积没有变小？</strong> 与源图已接近最优、或质量设置较高时会出现；可尝试调低质量或检查是否启用了
+              <span class="muted">“若更大则跳过”</span> 等选项。
+            </li>
+            <li>
+              <strong>支持批量与动图吗？</strong> 支持拖入文件夹（含子项）；WebP
+              含动图时按应用当前版本能力处理。
+            </li>
+            <li>
+              <strong>需要访问我的哪些文件？</strong> 仅处理您通过拖拽或选择明确授权的路径；请在系统与沙盒提示中允许访问相关文件夹（若使用 Mac App Store 版本）。
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>故障排除</h2>
+          <ul>
+            <li>若压缩失败，请确认磁盘空间充足、目标路径可写，且源文件未损坏</li>
+            <li>若界面无响应，可完全退出后重新打开，并确保系统为支持的 macOS 版本</li>
+            <li>与某一特定文件必现时，请通过下方反馈渠道附上系统版本、PicCute 版本与复现步骤</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>反馈与联系</h2>
+          <div class="card">
+            <p>
+              <strong>功能建议、缺陷报告与使用问题</strong> 请优先在
+              <a
+                href="https://github.com/Cooooldo/PicCute-Feedback/issues"
+                rel="noopener noreferrer"
+                >GitHub Issues</a
+              >
+              提交，便于跟踪与回复。
+            </p>
+            <p class="muted">提交时建议写明：macOS 版本、PicCute 版本、期望行为与实际行为、能否稳定复现。</p>
+          </div>
+        </section>
+      </div>
+
+      <div id="block-en" hidden>
+        <h1>Support</h1>
+        <p class="lede">
+          PicCute is a lightweight image compression app for macOS (PNG, JPEG, and WebP). Below you’ll
+          find official notes and common questions.
+        </p>
+
+        <section>
+          <h2>System requirements</h2>
+          <ul>
+            <li>macOS 11 (Big Sur) or later</li>
+            <li>Apple Silicon and Intel Macs</li>
+            <li>Applies whether you install from the Mac App Store or another official channel</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Quick start</h2>
+          <ul>
+            <li>Drop files or a folder, choose format and quality, then compress</li>
+            <li>Override originals in settings, or set a custom output folder and filename template</li>
+            <li>Use the menu <strong>PicCute → Language / 语言</strong> to switch the UI (independently of the system language)</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>FAQ</h2>
+          <ul>
+            <li>
+              <strong>Why didn’t the file get smaller?</strong> Sources may already be well optimized, or
+              quality may be high. Try a lower quality setting or check options such as
+              <span class="muted">“skip if larger”</span>.
+            </li>
+            <li>
+              <strong>Batch and animation?</strong> Folders (including subfolders) are supported. Animated
+              WebP follows the capabilities of your installed PicCute version.
+            </li>
+            <li>
+              <strong>Which files are accessed?</strong> Only files and folders you explicitly add or
+              select. Grant folder access if macOS or the App Store sandbox prompts you to.
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Troubleshooting</h2>
+          <ul>
+            <li>If compression fails, check free disk space, that the destination is writable, and that the source file isn’t corrupted</li>
+            <li>If the UI freezes, quit fully and relaunch; confirm your macOS version is supported</li>
+            <li>For a reproducible issue, include your macOS version, PicCute version, and steps when you contact us below</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Feedback &amp; contact</h2>
+          <div class="card">
+            <p>
+              <strong>Feature requests, bug reports, and how-to questions:</strong> please use
+              <a
+                href="https://github.com/Cooooldo/PicCute-Feedback/issues"
+                rel="noopener noreferrer"
+                >GitHub Issues</a
+              >
+              so we can track and reply.
+            </p>
+            <p class="muted">Include: macOS version, PicCute version, what you expected vs. what happened, and whether the issue is reproducible.</p>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script>
+      (function () {
+        var blockZh = document.getElementById("block-zh");
+        var blockEn = document.getElementById("block-en");
+        var linkZh = document.getElementById("link-zh");
+        var linkEn = document.getElementById("link-en");
+
+        function setLang(isEn) {
+          blockZh.hidden = isEn;
+          blockEn.hidden = !isEn;
+          linkZh.setAttribute("aria-current", isEn ? "false" : "true");
+          linkEn.setAttribute("aria-current", isEn ? "true" : "false");
+          document.documentElement.lang = isEn ? "en" : "zh-Hans";
+        }
+
+        function applyFromHash() {
+          setLang(window.location.hash === "#en");
+        }
+
+        linkZh.addEventListener("click", function (e) {
+          e.preventDefault();
+          history.replaceState(null, "", "#zh");
+          setLang(false);
+        });
+        linkEn.addEventListener("click", function (e) {
+          e.preventDefault();
+          history.replaceState(null, "", "#en");
+          setLang(true);
+        });
+        window.addEventListener("hashchange", applyFromHash);
+        if (window.location.hash === "#en") {
+          setLang(true);
+        }
+      })();
+    </script>
+  </body>
+</html>
