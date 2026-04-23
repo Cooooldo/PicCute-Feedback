@@ -28,7 +28,7 @@ python3 -m http.server 8080
 
 ## 支持邮箱 / Support email
 
-`index.html` 内当前为占位地址 **`CHANGE_THIS_EMAIL@example.com`**。在仓库里 **全局搜索该字符串**（含 `mailto:` 与显示文字）并全部替换为你真实可收信的地址后再保存、推送；上架 App Store 前务必完成，否则用户无法通过邮件联系你。
+对外支持邮箱：**aimeng661@gmail.com**（已写入 `index.html` 的中英联系区块与 `mailto:`）。若日后更换，请在 `index.html` 中全局替换该地址。
 
 ## Files
 
