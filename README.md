@@ -8,6 +8,9 @@ Public **technical support** page for [PicCute](https://github.com/Cooooldo/PicC
   `https://cooooldo.github.io/PicCute-Feedback/`  
   (If your username casing differs in the real URL, copy it from **Settings → Pages** after publish.)
 
+- **Privacy Policy URL (隐私政策网址):**  
+  `https://cooooldo.github.io/PicCute-Feedback/privacy.html`
+
 - **Feedback:** use [Issues in this repository](https://github.com/Cooooldo/PicCute-Feedback/issues).
 
 ## Enable GitHub Pages
@@ -33,5 +36,6 @@ python3 -m http.server 8080
 ## Files
 
 - `index.html` — Bilingual (简体中文 / English) support page, hash routes `#zh` and `#en`.
+- `privacy.html` — Bilingual (简体中文 / English) privacy policy page, hash routes `#zh` and `#en`.
 
 When **minimum macOS** or support policy changes, update the “系统要求 / System requirements” section in `index.html` to match the shipping app (see `minimumSystemVersion` in the app’s `tauri.conf.json`).
