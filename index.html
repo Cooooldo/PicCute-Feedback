@@ -136,6 +136,15 @@
         color: var(--muted);
         font-size: 0.9rem;
       }
+      code {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 4px;
+        padding: 0 0.35em;
+        font-size: 0.9em;
+        font-family:
+          ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      }
       [hidden] {
         display: none !important;
       }
@@ -154,16 +163,32 @@
 
     <main>
       <div id="block-zh">
-        <h1>技术支持</h1>
+        <h1>PicCute 技术支持</h1>
         <p class="lede">
-          PicCute 是面向 macOS 的轻量图片压缩工具，支持 PNG、JPEG 与 WebP。下面为官方说明与常见问题。
+          PicCute 是一款面向 macOS 的轻量图片压缩工具：把图片或文件夹拖进来，选个质量，点压缩——几秒内为你减掉约 60% 的体积，画面几乎看不出区别。支持 PNG / JPEG / WebP 互转，亦可批量处理，并提供压缩前后对比预览。本页汇总系统要求、使用说明、常见问题与反馈方式。
         </p>
+
+        <section>
+          <h2>关于 PicCute</h2>
+          <ul>
+            <li><strong>拖拽即用</strong>：打开就会，无需阅读说明</li>
+            <li><strong>三种格式互转</strong>：PNG、JPEG、WebP，包含动态 WebP</li>
+            <li><strong>批量压缩</strong>：整个文件夹扔进去，自动处理子目录</li>
+            <li><strong>对比预览</strong>：压缩前后可拖动滑块对照，确认后再保存</li>
+            <li><strong>自定义输出</strong>：覆盖原文件，或指定输出目录与文件名模板（如 <code>{name}</code>、<code>{ext}</code>）</li>
+            <li><strong>简单 / 高级两档</strong>：一根滑块即可，亦可调质量、速度、抖动、最大色数</li>
+            <li><strong>可选 oxipng 二次无损</strong>：再榨一点体积</li>
+            <li><strong>体积更大就跳过</strong>：绝不帮倒忙</li>
+            <li><strong>原生体验</strong>：完成后系统通知，一键在访达中显示；简体中文 / English 菜单可随时切换</li>
+          </ul>
+          <p class="muted">技术栈：Rust + Tauri 2 + React。v0.1.x 名为 PNGCute，自 v0.2.0 起更名为 PicCute。</p>
+        </section>
 
         <section>
           <h2>系统要求</h2>
           <ul>
             <li>macOS 11（Big Sur）或更高版本</li>
-            <li>支持 Apple Silicon 与 Intel Mac</li>
+            <li>支持 Apple Silicon 与 Intel Mac（Universal 构建）</li>
             <li>从 Mac App Store 或官方分发渠道安装的应用均适用本页说明</li>
           </ul>
         </section>
@@ -226,17 +251,36 @@
       </div>
 
       <div id="block-en" hidden>
-        <h1>Support</h1>
+        <h1>PicCute Support</h1>
         <p class="lede">
-          PicCute is a lightweight image compression app for macOS (PNG, JPEG, and WebP). Below you’ll
-          find official notes and common questions.
+          PicCute is a lightweight image compressor for macOS. Drop images or a folder, pick a quality,
+          hit compress — in seconds you’ll trim roughly 60% of the file size with no visible loss.
+          Supports PNG, JPEG, and WebP (including animated WebP) with conversion between them, batch
+          processing, and a side-by-side before/after preview. This page covers system requirements,
+          usage notes, FAQ, and how to reach us.
         </p>
+
+        <section>
+          <h2>About PicCute</h2>
+          <ul>
+            <li><strong>Drag and drop</strong> — no manual to read, just open and go</li>
+            <li><strong>Three formats</strong> — PNG, JPEG, and WebP, with conversion between them</li>
+            <li><strong>Batch compression</strong> — drop a folder and we’ll handle subfolders too</li>
+            <li><strong>Side-by-side preview</strong> — drag the compare slider, then save with confidence</li>
+            <li><strong>Custom output</strong> — overwrite originals, or pick a folder with a filename template (e.g. <code>{name}</code>, <code>{ext}</code>)</li>
+            <li><strong>Simple or Custom mode</strong> — one slider does it all, or tune quality, speed, dithering, and max colors</li>
+            <li><strong>Optional oxipng second pass</strong> — squeeze out a few more bytes losslessly</li>
+            <li><strong>Auto-skip if the result is larger</strong> — never makes a file worse</li>
+            <li><strong>Native feel</strong> — macOS notifications, reveal in Finder, and English / 简体中文 UI switcher</li>
+          </ul>
+          <p class="muted">Built with Rust + Tauri 2 + React. Originally released as PNGCute (v0.1.x); renamed PicCute from v0.2.0 when JPEG and WebP support landed.</p>
+        </section>
 
         <section>
           <h2>System requirements</h2>
           <ul>
             <li>macOS 11 (Big Sur) or later</li>
-            <li>Apple Silicon and Intel Macs</li>
+            <li>Apple Silicon and Intel Macs (Universal build)</li>
             <li>Applies whether you install from the Mac App Store or another official channel</li>
           </ul>
         </section>
